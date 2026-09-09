@@ -140,28 +140,24 @@
     ]
   },
   "mechanism": {
-    "title": "Why this works better than starting with a blank notebook",
+    "title": "Why this works when “I’ll just make a list” doesn’t",
     "items": [
       {
-        "title": "It Prompts You",
+        "title": "Guided Prompts",
         "paragraphs": [
-          "You don’t have to remember what you’re supposed to remember.",
-          "The questions are already there."
+          "You don’t have to remember what to include. The system asks the questions that are easy to miss until someone urgently needs the answer."
         ]
       },
       {
-        "title": "It Organises It",
+        "title": "Built-In Structure",
         "paragraphs": [
-          "Someone looking for insurance can go to insurance.",
-          "Someone looking for a bill can go to bills.",
-          "They don’t need to understand your filing system first."
+          "Everything has a clear place, so your family can find what they need quickly instead of digging through one long list."
         ]
       },
       {
-        "title": "It Covers The Awkward Bits",
+        "title": "Shaped Around Real Emergencies",
         "paragraphs": [
-          "The things you normally only discover matter when there’s a problem.",
-          "That’s exactly what you want written down beforehand."
+          "Built around the practical information families actually need when someone suddenly isn’t there to answer the questions."
         ]
       }
     ]
