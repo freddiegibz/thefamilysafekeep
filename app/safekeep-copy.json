@@ -69,43 +69,33 @@
     "intro": "A guided system for getting the information you carry around in your head into one place your family can actually use.",
     "items": [
       {
-        "title": "Master Account Index",
+        "title": "The Family Account Registry",
         "paragraphs": [
-          "Bank accounts, savings, credit cards and investments.",
-          "What exists and where to find it."
+          "Every bank, savings, investment, and credit account in one place. So no account gets missed."
         ]
       },
       {
-        "title": "Insurance Control Hub",
+        "title": "The Insurance File",
         "paragraphs": [
-          "Life, home, health and car insurance.",
-          "Policies, providers and contact details together."
+          "Life, home, health, and auto policies—along with policy numbers and who to contact. No hunting through paperwork when it matters."
         ]
       },
       {
-        "title": "Digital Access Guide",
+        "title": "The Digital Access Guide",
         "paragraphs": [
-          "Phone access, email, important logins and online accounts.",
-          "The things that become surprisingly difficult when the person who set them up isn’t there."
+          "Phone passcodes, email logins, important online accounts, and where everything is stored. So your family can actually get into the things they need."
         ]
       },
       {
-        "title": "Autopay Tracker & Bill Schedule",
+        "title": "The Bills & Autopay Map",
         "paragraphs": [
-          "What gets paid automatically.",
-          "Which account it comes from.",
-          "When it goes out.",
-          "So nobody is finding out about an important payment because it suddenly stopped."
+          "What gets paid, when it gets paid, and which account it comes from. So the mortgage, utilities, and other important bills don’t suddenly get missed."
         ]
       },
       {
-        "title": "Plus The Other Things People Forget",
+        "title": "Plus 4 More Critical Sections...",
         "paragraphs": [
-          "Emergency contacts.",
-          "Medical information.",
-          "Important possessions.",
-          "Digital assets.",
-          "And the practical details that are obvious to you because you deal with them every day."
+          "Medical Information, Emergency Contacts, Important Documents & Assets, and Digital Assets."
         ]
       }
     ]
