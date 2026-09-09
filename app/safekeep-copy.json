@@ -21,45 +21,37 @@
     ]
   },
   "alternatives": {
-    "title": "The problem with the things we normally do",
+    "title": "The uncomfortable truth we secretly know",
     "items": [
       {
-        "title": "“I’ll sort it out eventually”",
+        "title": "“I’ll do it later”",
         "paragraphs": [
-          "Eventually has a habit of becoming next month.",
-          "Then next year.",
-          "Meanwhile there are more accounts, more logins and more things to remember."
+          "But later never comes. Meanwhile, there are more accounts, more policies, more documents — and that background anxiety grows louder."
         ]
       },
       {
-        "title": "Notes Everywhere",
+        "title": "Scattered Notes",
         "paragraphs": [
-          "A password in your phone.",
-          "Insurance paperwork in a drawer.",
-          "A bank document upstairs.",
-          "Something important buried in your email.",
-          "You know where to look.",
-          "That doesn’t mean anyone else does."
+          "Passwords in your phone notes. Documents in “that drawer.”",
+          "This isn’t a system. It’s a scavenger hunt for your family."
         ]
       },
       {
-        "title": "Shared Notes",
+        "title": "Notes Apps",
         "paragraphs": [
-          "Useful for the Wi-Fi password.",
-          "Useful for the shopping list.",
-          "Less useful when someone needs to understand the bank accounts, insurance, household bills and everything else you normally deal with."
+          "Disorganised, and usually just turns into the Netflix password and a grocery list.",
+          "Not secure. Not structured. Not enough."
         ]
       },
       {
-        "title": "Estate Planning",
+        "title": "The Expensive Lawyer",
         "paragraphs": [
-          "A will is important.",
-          "But it doesn’t tell your husband where the home insurance paperwork is, which card pays the electricity bill or how to get into an account you set up three years ago.",
-          "That’s a different kind of problem."
+          "$2,000+ and it covers the legal side.",
+          "But it doesn’t tell your husband how to pay the water bill or what the Wi-Fi password is."
         ]
       }
     ],
-    "close": "You don’t need convincing that you should organise this. You need an easy way to actually finish it."
+    "close": ""
   },
   "solution": {
     "eyebrow": "There’s a simpler way",
