@@ -1,9 +1,8 @@
 ﻿'use client';
-import {useState} from 'react';
-import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
+
 import './oto.css';
 export default function FinalWishesPage(){
- const [open,setOpen]=useState(false);
+
  return <main className="oto"><article className="oto-letter">
  <header className="oto-opening"><h1>Your Family Can Now Find Everything They Need.</h1><h2>But There’s One Thing The ICE Vault Can’t Tell Them.</h2></header>
  <div className="oto-prose">
@@ -42,10 +41,9 @@ export default function FinalWishesPage(){
  <div className="oto-rule"/>
  <section className="oto-close" id="complete"><h2>Finish The Job While The Answers Are Still Yours To Give.</h2>
  <p>Add <strong>The No-Guessing Final Wishes Pack</strong> to your order today for <strong>$37</strong>.</p>
- <button className="button oto-accept" onClick={()=>setOpen(true)}>YES — ADD MY FINAL WISHES PACK — $37</button>
+ <a className="button oto-accept" href="https://buy.stripe.com/8x25kCevh9gwdGUcCebZe17">YES — ADD MY FINAL WISHES PACK — $37</a>
  <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
  <a className="oto-decline" href="/oto2"><strong>No thanks, I’ll continue with my ICE Vault.</strong></a></section>
  </div></article>
- <Dialog open={open} onOpenChange={setOpen}><DialogContent className="checkout-dialog"><DialogHeader><DialogTitle>The No-Guessing Final Wishes Pack</DialogTitle><DialogDescription>This is a checkout preview. No payment will be taken.</DialogDescription></DialogHeader><div className="checkout-line"><span>The No-Guessing Final Wishes Pack</span><strong>$37</strong></div><a className="button" href="/oto2">Continue</a></DialogContent></Dialog>
  </main>;
 }

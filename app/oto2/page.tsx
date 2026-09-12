@@ -1,9 +1,8 @@
 ﻿'use client';
-import {useState} from 'react';
-import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
+
 import '../oto1/oto.css';
 export default function FamilyContinuityPage(){
- const [choice,setChoice]=useState<'accept'|'decline'|null>(null);
+
  return <main className="oto"><article className="oto-letter">
  <header className="oto-opening"><h1>You’ve Made Sure They Won’t Be Left Scrambling Without You.</h1><h2>But Would You Be Ready If Something Happened To Them?</h2></header>
  <div className="oto-prose">
@@ -42,10 +41,9 @@ export default function FamilyContinuityPage(){
  <div className="oto-rule"/>
  <section className="oto-close"><h2>Add The Family Continuity Pack For $27</h2>
  <p>Use it with your partner, your parents, or both.</p><p>Complete it while the answers are easy to get.</p>
- <button className="button oto-accept" onClick={()=>setChoice('accept')}>YES — ADD THE FAMILY CONTINUITY PACK — $27</button>
+ <a className="button oto-accept" href="https://buy.stripe.com/4gMbJ0evh3Wc6esau6bZe18">YES — ADD THE FAMILY CONTINUITY PACK — $27</a>
  <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
- <button className="oto-decline" onClick={()=>setChoice('decline')}><strong>No thanks, I’ll continue without the Family Continuity Pack.</strong></button></section>
+ <a className="oto-decline" href="/thank-you"><strong>No thanks, I’ll continue without the Family Continuity Pack.</strong></a></section>
  </div></article>
- <Dialog open={choice!==null} onOpenChange={open=>{if(!open)setChoice(null)}}><DialogContent className="checkout-dialog"><DialogHeader><DialogTitle>{choice==='accept'?'The Family Continuity Pack':'Continue without the Family Continuity Pack'}</DialogTitle><DialogDescription>This is a checkout preview. No payment will be taken and no order has been changed.</DialogDescription></DialogHeader>{choice==='accept'&&<div className="checkout-line"><span>The Family Continuity Pack</span><strong>$27</strong></div>}<a className="button" href="/thank-you">Continue to your next steps</a></DialogContent></Dialog>
  </main>;
 }
