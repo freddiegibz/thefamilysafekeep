@@ -1,4 +1,7 @@
-﻿@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+@source './';
+@source '../components';
+@source '../hooks';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 :root{--background:#fdfcf8;--foreground:#152a45;--primary:#1e3a5f;--primary-foreground:#fff;--border:#e1e4e8;--ring:#b68d3b;--card:#fff;--card-foreground:#152a45;--popover:#fff;--popover-foreground:#152a45;--muted:#f5f3ec;--muted-foreground:#596273;--accent:#f6eedc;--accent-foreground:#152a45;--input:#cbd1d9;--radius:.3rem;--secondary:#f6eedc;--secondary-foreground:#152a45;--destructive:#a43224}
