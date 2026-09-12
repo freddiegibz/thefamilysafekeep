@@ -24,24 +24,20 @@
       "@/*": [
         "./*"
       ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "app/**/*.tsx",
+    "components/**/*.tsx",
+    "hooks/**/*.ts",
+    "lib/**/*.ts",
+    "main.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "outputs"
+    "outputs",
+    ".next"
   ]
 }

@@ -1,11 +1,5 @@
-import type {Metadata} from 'next';
 import './thanks.css';
 
-export const metadata: Metadata = {
- title: 'Thank You | The Family Safekeep',
- description: 'A simple place to start getting your family’s important information organised.',
- robots: {index: false, follow: false},
-};
 
 export default function ThankYouPage(){
  return <main className="thanks">
