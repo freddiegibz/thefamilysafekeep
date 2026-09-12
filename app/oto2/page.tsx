@@ -5,6 +5,7 @@ export default function FamilyContinuityPage(){
 
  return <main className="oto"><article className="oto-letter">
  <header className="oto-opening"><h1>You’ve Made Sure They Won’t Be Left Scrambling Without You.</h1><h2>But Would You Be Ready If Something Happened To Them?</h2></header>
+ <img className="oto-outcome" src="/oto2-outcome.png" alt="A woman and her father feeling reassured after talking through his important information" width="1536" height="1024" />
  <div className="oto-prose">
  <p>You’ve just organised the information your family would need if you suddenly weren’t there to answer questions.</p>
  <p>Now turn that around.</p>

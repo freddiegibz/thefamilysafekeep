@@ -5,6 +5,7 @@ export default function FinalWishesPage(){
 
  return <main className="oto"><article className="oto-letter">
  <header className="oto-opening"><h1>Your Family Can Now Find Everything They Need.</h1><h2>But There’s One Thing The ICE Vault Can’t Tell Them.</h2></header>
+ <img className="oto-outcome" src="/oto1-outcome.png" alt="A mother and daughter sharing a reassuring conversation about her wishes" width="1536" height="1024" />
  <div className="oto-prose">
  <p>It can show them where the accounts are.</p>
  <p>Where the insurance details are.</p>
