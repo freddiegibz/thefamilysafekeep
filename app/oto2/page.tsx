@@ -46,6 +46,6 @@ export default function FamilyContinuityPage(){
  <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
  <button className="oto-decline" onClick={()=>setChoice('decline')}><strong>No thanks, I’ll continue without the Family Continuity Pack.</strong></button></section>
  </div></article>
- <Dialog open={choice!==null} onOpenChange={open=>{if(!open)setChoice(null)}}><DialogContent className="checkout-dialog"><DialogHeader><DialogTitle>{choice==='accept'?'The Family Continuity Pack':'Continue without the Family Continuity Pack'}</DialogTitle><DialogDescription>This is a checkout preview. No payment will be taken and no order has been changed.</DialogDescription></DialogHeader>{choice==='accept'&&<div className="checkout-line"><span>The Family Continuity Pack</span><strong>$27</strong></div>}<button className="button" onClick={()=>setChoice(null)}>Return to the page</button></DialogContent></Dialog>
+ <Dialog open={choice!==null} onOpenChange={open=>{if(!open)setChoice(null)}}><DialogContent className="checkout-dialog"><DialogHeader><DialogTitle>{choice==='accept'?'The Family Continuity Pack':'Continue without the Family Continuity Pack'}</DialogTitle><DialogDescription>This is a checkout preview. No payment will be taken and no order has been changed.</DialogDescription></DialogHeader>{choice==='accept'&&<div className="checkout-line"><span>The Family Continuity Pack</span><strong>$27</strong></div>}<a className="button" href="/thank-you">Continue to your next steps</a></DialogContent></Dialog>
  </main>;
 }
