@@ -42,7 +42,7 @@ export default function FamilyContinuityPage(){
  <div className="oto-rule"/>
  <section className="oto-close"><h2>Add The Family Continuity Pack For $27</h2>
  <p>Use it with your partner, your parents, or both.</p><p>Complete it while the answers are easy to get.</p>
- <button className="button oto-accept" onClick={()=>setChoice('accept')}>YES — ADD THE FAMILY CONTINUITY PACK</button>
+ <button className="button oto-accept" onClick={()=>setChoice('accept')}>YES — ADD THE FAMILY CONTINUITY PACK — $27</button>
  <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
  <button className="oto-decline" onClick={()=>setChoice('decline')}><strong>No thanks, I’ll continue without the Family Continuity Pack.</strong></button></section>
  </div></article>

@@ -42,7 +42,7 @@ export default function FinalWishesPage(){
  <div className="oto-rule"/>
  <section className="oto-close" id="complete"><h2>Finish The Job While The Answers Are Still Yours To Give.</h2>
  <p>Add <strong>The No-Guessing Final Wishes Pack</strong> to your order today for <strong>$37</strong>.</p>
- <button className="button oto-accept" onClick={()=>setOpen(true)}>YES — ADD MY FINAL WISHES PACK</button>
+ <button className="button oto-accept" onClick={()=>setOpen(true)}>YES — ADD MY FINAL WISHES PACK — $37</button>
  <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
  <a className="oto-decline" href="/oto2"><strong>No thanks, I’ll continue with my ICE Vault.</strong></a></section>
  </div></article>
