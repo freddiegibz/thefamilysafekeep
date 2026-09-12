@@ -15,6 +15,7 @@ export default function ThankYouPage(){
    <p className="thanks-eyebrow">FOR THE PEOPLE WHO MATTER MOST</p>
    <h1>Thank you for taking<br/><em>this step for your family.</em></h1>
    <p>You’ve been meaning to get it all written down.<br/>Now you have a place to start.</p>
+   <div className="thanks-download"><button className="button" disabled aria-describedby="download-status"><span aria-hidden="true">↓</span> Download Your Binder</button><p id="download-status">Download link not connected yet.</p></div>
   </section>
   <section className="thanks-start" aria-labelledby="start-heading">
    <div><p className="thanks-eyebrow">START SMALL. KEEP GOING.</p><h2 id="start-heading">You don’t have to<br/>finish it all today.</h2><p>Set aside a little time, open your binder and start with the details you already know. You can come back to anything you need to look up.</p><p><strong>Every answer you write down is one less thing your family has to figure out.</strong></p></div>
