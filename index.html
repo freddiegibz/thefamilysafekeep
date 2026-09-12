@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1525816065964605');
+      fbq('track', 'PageView');
+      if (window.location.pathname.replace(/\/+$/, '') === '/oto1') {
+        fbq('track', 'Purchase');
+      }
+      document.addEventListener('click', function(event) {
+        var link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+        if (link && link.hostname === 'buy.stripe.com') {
+          fbq('track', 'InitiateCheckout');
+        }
+      });
+    </script>
+    <!-- End Meta Pixel Code -->
     <meta name="description" content="One clear family hand-off. The If I’m Not Here digital binder. PDF and Notion for $27." />
     <link rel="icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +35,7 @@
     <style>:root{--font-body:'Inter',sans-serif;--font-editorial:'Playfair Display',serif}</style>
   </head>
   <body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1525816065964605&amp;ev=PageView&amp;noscript=1" alt="" /></noscript>
     <div id="root"></div>
     <script type="module" src="/main.tsx"></script>
   </body>
