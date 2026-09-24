@@ -38,17 +38,23 @@ export default function SafekeepSortedPage() {
         <p>If you’d rather have someone help you work through your Family Safekeep and make sure it actually gets done, we can do that together.</p>
       </section>
 
-      <section className="sorted-letter-offer">
-        <h2>Your Family Safekeep, Sorted</h2>
+      <section className="sorted-letter-section sorted-letter-bridge">
         <p>A private Guided Completion where we work through your Family Safekeep with you, help you deal with anything that would otherwise slow you down, and stay with the process until it is properly completed and ready for your family.</p>
         <p>The goal isn’t simply to have a useful session.</p>
         <p>The goal is to get you from:</p>
         <p className="sorted-letter-quote">“I still need to finish that.”</p>
         <p>to:</p>
         <h2 className="sorted-letter-outcome">“It’s sorted.”</h2>
-        <h3>Private Guided Completion — $97</h3>
-        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY FAMILY SAFEKEEP FINISHED <ArrowRight aria-hidden="true" /></button>
       </section>
+      <section className="sorted-letter-offer">
+        <h2>Your Family Safekeep, Sorted</h2>
+        <p className="sorted-letter-price">Private Guided Completion — $97</p>
+        <p>We’ll work through it together and get it properly finished.</p>
+        <h3>Leave With It Done.</h3>
+        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY SAFEKEEP FINISHED — $97 <ArrowRight aria-hidden="true" /></button>
+        <p className="sorted-letter-disclaimer">Private organisational support only. No legal, financial or tax advice.</p>
+      </section>
+      <a className="sorted-letter-decline" href="/oto2">No thanks — I’m happy to complete it myself.</a>
     </div>
   </main>;
 }
