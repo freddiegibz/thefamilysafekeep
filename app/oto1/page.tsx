@@ -1,68 +1,45 @@
-import { Folder, MessagesSquare, ListChecks, Sprout } from 'lucide-react';
+import { ArrowRight, Check, CheckCircle2, ClipboardList, Heart, LockKeyhole, MessageCircle, UserRound, UsersRound } from 'lucide-react';
 import './setup.css';
 
 const steps = [
-  { icon: Folder, title: '1. Bring What You Have', text: 'Gather your Safekeep and the documents and details you want included.' },
-  { icon: MessagesSquare, title: '2. We Complete It Together', text: 'We work through every section with you, put the information in the right place and answer your questions.' },
-  { icon: ListChecks, title: '3. You Leave With It Done', text: 'Your Safekeep is completed, organised and ready for your family to use.' },
-];
-const before = [
-  'You feel unsure where to start or what to do next.',
-  'Your paperwork is in different places.',
-  'Some sections keep getting put off.',
-  'You worry that something important may be missed.',
-];
-const after = [
-  'Every section has been worked through.',
-  'Your important information is in one place.',
-  'The details are clear and organised.',
-  'Your family has something practical to use.',
-  'Your Safekeep is done.',
+  { icon: ClipboardList, title: 'Get Ready', text: "I’ll send you a short preparation guide so you know what’s useful to have nearby." },
+  { icon: UsersRound, title: 'Do It Together', text: "We'll work through your Family Safekeep together, section by section." },
+  { icon: CheckCircle2, title: 'Finish It', text: 'If anything genuinely needs retrieving afterwards, we deal with it and complete the final check.', outcome: 'The outcome: your Family Safekeep is done.' },
 ];
 
 export default function SafekeepSortedPage() {
   return <main className="sorted-page">
+    <header className="sorted-header sorted-wrap">
+      <div className="sorted-logo"><span className="sorted-logo-mark" aria-hidden="true">✳</span><span><strong>FAMILY SAFEKEEP</strong><small>CLARITY TODAY. SUPPORT TOMORROW.</small></span></div>
+      <div className="sorted-checkout"><LockKeyhole size={13} aria-hidden="true" /> <span>SECURE CHECKOUT<br />ONE TIME OFFER</span></div>
+    </header>
+    <div className="sorted-notice"><span className="sorted-notice-check"><Check size={15} aria-hidden="true" /></span>You’ve taken the first step towards leaving everything clear, organised and easier for your family.</div>
     <section className="sorted-hero">
       <div className="sorted-hero-content">
-        <div className="sorted-brand">Family Safekeep</div>
-        <h1>Let’s Get Your<br />{' '}Safekeep Done Together.</h1>
-        <p className="sorted-hero-lead">Set aside the time. We’ll sit down and finish it with you.</p>
-        <p className="sorted-hero-copy">A private one-to-one Guided Completion Session where we work through your Family Safekeep together, section by section, until it’s complete.</p>
-        <button className="sorted-button" type="button" disabled>YES — LET’S COMPLETE MY SAFEKEEP TOGETHER — $97</button>
+        <h1>Now Let’s Get Your<br />Family Safekeep Finished.</h1>
+        <h2>You don’t have to work through it all alone.</h2>
+        <p>You’ve already decided this matters.</p>
+        <p>The only part left is actually sitting down, finding what you need and getting it properly completed.</p>
+        <p>With <strong>Your Family Safekeep, Sorted</strong>, we’ll work through it together until your Family Safekeep is organised, complete and ready for your family to use.</p>
+        <p className="sorted-hero-price">Private Guided Completion — $97</p>
+        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY FAMILY SAFEKEEP FINISHED <ArrowRight aria-hidden="true" /></button>
+        <p className="sorted-hero-note">Private organisational support only. No legal, financial or tax advice.</p>
       </div>
-      <div className="sorted-hero-image"><img src="/oto1-guided-session.png" alt="A guide and a customer working through the Safekeep together at a table" width="1536" height="1024" /></div>
-    </section>
-    <section className="sorted-intro sorted-wrap">
-      <h2>Because buying it is only the first step.</h2>
-      <p>You bought your Family Safekeep so the people you love won’t be left searching for information later.</p>
-      <p>Some parts are straightforward. Others mean finding documents, checking details or making decisions.</p>
-      <p>When life gets busy, an important job can stay on the to-do list.</p>
-      <p>This session gives you the support and time to get it finished together.</p>
+      <div className="sorted-hero-image"><img src="/oto1-guided-session.png" alt="A guide and customer working through a Family Safekeep together" /><div className="sorted-photo-note">Get it<br />done, for<br />the people<br />who matter<br />most.<span /></div></div>
     </section>
     <section className="sorted-process"><div className="sorted-wrap">
-      <h2>How this works</h2>
-      <div className="sorted-steps">{steps.map(({icon: Icon, title, text}) => <article className="sorted-step" key={title}><Icon aria-hidden="true" strokeWidth={1.3} /><h3>{title}</h3><p>{text}</p></article>)}</div>
+      <h2>Here’s How We’ll Get It Done</h2>
+      <div className="sorted-steps">{steps.map(({icon: Icon, title, text, outcome}, index) => <article className="sorted-step" key={title}><span className="sorted-step-number">{index + 1}</span><Icon className="sorted-step-icon" aria-hidden="true" strokeWidth={1.4} /><div><h3>{title}</h3><p>{text}</p>{outcome && <strong>{outcome}</strong>}</div></article>)}</div>
     </div></section>
-    <section className="sorted-outcomes sorted-wrap">
-      <div className="sorted-comparison">
-        <article className="sorted-before"><h2>Before</h2><ul>{before.map(item => <li key={item}>{item}</li>)}</ul></article>
-        <article className="sorted-after"><h2>After</h2><ul>{after.map(item => <li key={item}>{item}</li>)}</ul></article>
-      </div>
-      <div className="sorted-ready">
-        <div className="sorted-ready-icon"><Sprout aria-hidden="true" strokeWidth={1} /></div>
-        <div><h2>You Don’t Have To Figure It Out Alone.</h2><p>Bring your Safekeep and the information you want your family to have. We’ll help you turn it into a completed, organised record.</p>
-          <ul><li>No need to decide where everything goes beforehand.</li><li>No need to work through difficult sections on your own.</li><li>No need to keep putting it off.</li><li>We sit down and get it done together.</li></ul>
-        </div>
-      </div>
-      <section className="sorted-offer">
-        <h2>Your Safekeep, Sorted</h2>
-        <p className="sorted-offer-subtitle">Done-with-you Guided Completion Session</p>
-        <p className="sorted-price">$97 <span>— one time</span></p>
-        <p className="sorted-offer-copy">A private one-to-one session to complete your Family Safekeep with you, so it’s organised, finished and ready for your family to use.</p>
-        <button className="sorted-button" type="button" disabled>YES — LET’S COMPLETE MY SAFEKEEP TOGETHER — $97</button>
-        <p className="sorted-disclaimer">Private guided support only. No legal, financial or tax advice is provided.</p>
-      </section>
-      <a className="sorted-decline" href="/oto2">No thanks — I’ll complete my Safekeep on my own.</a>
+    <section className="sorted-reassurance sorted-wrap">
+      <div className="sorted-reassurance-heading"><h2>You Don’t Have To<br />Figure It Out By Yourself.</h2><div className="sorted-values"><span><LockKeyhole />Private.</span><span><Heart />Personal.</span><span><UserRound />Practical.</span><span><MessageCircle />No judgement.</span></div></div>
+      <blockquote><span>“</span><p>“I’d been meaning to finish it for weeks. Having someone work through it with me meant I finally got it done.”</p><cite>Alex B, 68</cite></blockquote>
+      <blockquote><span>“</span><p>“The best part was the feeling afterwards. I knew everything important was finally in one place.”</p><cite>Michael B, 62</cite></blockquote>
+    </section>
+    <section className="sorted-offer sorted-wrap">
+      <div className="sorted-offer-top"><div className="sorted-offer-name"><span className="sorted-offer-mark" aria-hidden="true">✳</span><div><h2>Your Family Safekeep, Sorted.</h2><p>$97 — one time</p></div></div><ul><li>Private one-to-one completion support</li><li>Help through every section</li><li>Follow-up for anything genuinely outstanding</li><li>Final completion check</li></ul></div>
+      <button className="sorted-button" type="button" disabled>YES — LET’S GET MY FAMILY SAFEKEEP FINISHED — $97 <ArrowRight aria-hidden="true" /></button>
+      <a className="sorted-decline" href="/oto2">No thanks — I'm happy to complete my Family Safekeep myself.</a>
     </section>
   </main>;
 }
