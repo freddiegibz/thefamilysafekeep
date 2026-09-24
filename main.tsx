@@ -8,8 +8,8 @@ import ThankYou from './app/thank-you/page';
 const path = window.location.pathname.replace(/\/+$/, '') || '/';
 const routes = {
   '/': {Page: Home, title: 'The Family Safekeep | Give your family a place to start'},
-  '/oto1': {Page: Oto1, title: 'The No-Guessing Final Wishes Pack | The Family Safekeep'},
-  '/oto2': {Page: Oto2, title: 'Your Safekeep, Sorted | The Family Safekeep'},
+  '/oto1': {Page: Oto1, title: 'Your Safekeep, Sorted | The Family Safekeep'},
+  '/oto2': {Page: Oto2, title: 'The No-Guessing Final Wishes Pack | The Family Safekeep'},
   '/thank-you': {Page: ThankYou, title: 'Thank You | The Family Safekeep'},
 };
 const route = routes[path as keyof typeof routes];
