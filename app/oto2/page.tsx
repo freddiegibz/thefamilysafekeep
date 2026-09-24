@@ -1,50 +1,68 @@
-﻿'use client';
+import { Folder, MessagesSquare, ListChecks, Sprout } from 'lucide-react';
+import './setup.css';
 
-import '../oto1/oto.css';
-export default function FamilyContinuityPage(){
+const steps = [
+  { icon: Folder, title: '1. We Look At What You Already Have', text: 'We review what you’ve completed and what you have on hand.' },
+  { icon: MessagesSquare, title: '2. We Work Through It Together', text: 'We go through the next steps, answer your questions and help you make decisions.' },
+  { icon: ListChecks, title: '3. You Leave Knowing What’s Sorted', text: 'You’ll have clarity on what’s done and a clear plan for what remains.' },
+];
+const before = [
+  'You feel unsure where to start or what to do next.',
+  'Your paperwork is in different places.',
+  'Some sections keep getting put off.',
+  'You worry that something important may be missed.',
+];
+const after = [
+  'Key sections are worked through.',
+  'Missing information is identified.',
+  'You have a clear list of what remains.',
+  'You feel more organised and informed.',
+  'You know you’ve made real progress.',
+];
 
- return <main className="oto"><article className="oto-letter">
- <header className="oto-opening"><h1>You’ve Made Sure They Won’t Be Left Scrambling Without You.</h1><h2>But Would You Be Ready If Something Happened To Them?</h2></header>
- <img className="oto-outcome" src="/oto2-outcome.png" alt="A woman and her father feeling reassured after talking through his important information" width="1536" height="1024" />
- <div className="oto-prose">
- <p>You’ve just organised the information your family would need if you suddenly weren’t there to answer questions.</p>
- <p>Now turn that around.</p>
- <p>If your partner was taken into hospital tomorrow, would you know everything you needed?</p>
- <p>If your mum or dad suddenly needed you to step in, would you know where to start?</p>
- <p>Would you know:</p>
- <ul style={{listStyle:'disc',paddingLeft:'1.4em',marginBottom:25}}>
- <li>what medication they take?</li><li>who their doctors are?</li><li>where their important documents are?</li><li>which bills and accounts they manage?</li><li>what insurance they have?</li><li>where their will or Power of Attorney is kept?</li><li>who their key contacts are?</li><li>what they would want you to do?</li>
- </ul>
- <p>Most families don’t.</p><p>Not because they don’t care.</p><p>Because we rarely ask these questions until we suddenly need the answers.</p>
- <div className="oto-rule"/>
- <section><h2>Introducing The Family Continuity Pack</h2>
- <p>A simple way to collect the information you may one day need from the people closest to you — <strong>before an emergency forces you to find it the hard way.</strong></p>
- <p>Use it with your partner.</p><p>Use it with your parents.</p><p>Or use it with anyone whose affairs you may someday need to help manage.</p></section>
- <div className="oto-rule"/>
- <section><h2>Get The Information You’ll Wish You Had</h2>
- <p>Inside, you’ll get simple, guided sections for:</p>
- <p><strong>Medical Information</strong><br/>Doctors, medications, allergies, conditions and important health contacts.</p>
- <p><strong>Important Documents</strong><br/>Where wills, Powers of Attorney, insurance policies and other key paperwork are kept.</p>
- <p><strong>Money &amp; Household Information</strong><br/>Accounts, regular bills, pensions, benefits and the practical things someone may need to take over.</p>
- <p><strong>Professional &amp; Emergency Contacts</strong><br/>Solicitors, financial advisers, carers, neighbours and anyone else who may matter.</p>
- <p><strong>Home &amp; Property Details</strong><br/>The information someone would need if they suddenly had to manage the household.</p>
- <p><strong>Important Wishes</strong><br/>A place to record the things they would want you to know if they couldn’t explain them themselves.</p></section>
- <div className="oto-rule"/>
- <section><h2>And We’ve Included One More Thing:</h2><h2>The “How Do I Ask Them?” Conversation Guide</h2>
- <p>For many families, the hardest part isn’t writing this information down.</p><p>It’s starting the conversation.</p>
- <p>How do you ask your parents where their will is?</p>
- <p>How do you ask about accounts, medication or insurance without making it sound as if you’re expecting something terrible to happen?</p>
- <p>The included conversation guide gives you a simple, natural way to start.</p></section>
- <div className="oto-rule"/>
- <section><h2>You’ve Made Sure They’ll Know Where To Start With You.</h2><h2>Now Make Sure You’ll Know Where To Start With Them.</h2>
- <p>That’s the missing piece.</p><p>Not another emergency plan.</p><p>Not more paperwork for the sake of paperwork.</p>
- <p>Just the information that could save you hours of searching, phone calls and uncertainty if someone you love suddenly needs your help.</p></section>
- <div className="oto-rule"/>
- <section className="oto-close"><h2>Add The Family Continuity Pack For $27</h2>
- <p>Use it with your partner, your parents, or both.</p><p>Complete it while the answers are easy to get.</p>
- <a className="button oto-accept" href="https://buy.stripe.com/4gMbJ0evh3Wc6esau6bZe18">YES — ADD THE FAMILY CONTINUITY PACK — $27</a>
- <p className="oto-reassurance"><em>Immediate access. Complete it at your own pace.</em></p>
- <a className="oto-decline" href="/thank-you"><strong>No thanks, I’ll continue without the Family Continuity Pack.</strong></a></section>
- </div></article>
- </main>;
+export default function SafekeepSortedPage() {
+  return <main className="sorted-page">
+    <section className="sorted-hero">
+      <div className="sorted-hero-content">
+        <div className="sorted-brand">Family Safekeep</div>
+        <h1>You Don’t Have To<br />{' '}Do This Alone.</h1>
+        <p className="sorted-hero-lead">Get the important parts sorted, with someone beside you.</p>
+        <p className="sorted-hero-copy">A private one-to-one Guided Completion Session to help you work through your Safekeep and know what still needs to be done.</p>
+        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY SAFEKEEP SORTED — $97</button>
+      </div>
+      <div className="sorted-hero-image"><img src="/oto2-guided-session.png" alt="A guide and a customer working through the Safekeep together at a table" width="1536" height="1024" /></div>
+    </section>
+    <section className="sorted-intro sorted-wrap">
+      <h2>Because buying it is the easy part.</h2>
+      <p>You bought your Family Safekeep so the people you love won’t be left searching for information later.</p>
+      <p>Some parts are straightforward. Others mean finding documents, checking details or making decisions.</p>
+      <p>When life gets busy, an important job can stay on the to-do list.</p>
+      <p>A guided session helps you move forward, with clarity and confidence.</p>
+    </section>
+    <section className="sorted-process"><div className="sorted-wrap">
+      <h2>How this works</h2>
+      <div className="sorted-steps">{steps.map(({icon: Icon, title, text}) => <article className="sorted-step" key={title}><Icon aria-hidden="true" strokeWidth={1.3} /><h3>{title}</h3><p>{text}</p></article>)}</div>
+    </div></section>
+    <section className="sorted-outcomes sorted-wrap">
+      <div className="sorted-comparison">
+        <article className="sorted-before"><h2>Before</h2><ul>{before.map(item => <li key={item}>{item}</li>)}</ul></article>
+        <article className="sorted-after"><h2>After</h2><ul>{after.map(item => <li key={item}>{item}</li>)}</ul></article>
+      </div>
+      <div className="sorted-ready">
+        <div className="sorted-ready-icon"><Sprout aria-hidden="true" strokeWidth={1} /></div>
+        <div><h2>You Don’t Need To Be Ready.</h2><p>This is a supportive, no-pressure session. You don’t need to have everything sorted before we talk. We’ll meet you where you’re at.</p>
+          <ul><li>You do not need every answer.</li><li>You do not need all your paperwork.</li><li>You do not need to prepare perfectly.</li><li>Just bring what you have.</li><li>We start there.</li></ul>
+        </div>
+      </div>
+      <section className="sorted-offer">
+        <h2>Your Safekeep, Sorted</h2>
+        <p className="sorted-offer-subtitle">Private Guided Completion Session</p>
+        <p className="sorted-price">$97 <span>— one time</span></p>
+        <p className="sorted-offer-copy">A private one-to-one session to help you work through your Safekeep, get clarity on what’s still to do, and move forward with confidence.</p>
+        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY SAFEKEEP SORTED — $97</button>
+        <p className="sorted-disclaimer">Private guided support only. No legal, financial or tax advice is provided.</p>
+      </section>
+      <a className="sorted-decline" href="/thank-you">No thanks — I’ll complete my Safekeep on my own.</a>
+    </section>
+  </main>;
 }
