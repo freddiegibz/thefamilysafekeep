@@ -17,8 +17,8 @@ export default function SafekeepSortedPage() {
         <p>That matters.</p>
         <p>Because the whole point of your Family Safekeep is to make things easier for them at the moment they may need that help most.</p>
       </div>
-      <div className="sorted-letter-image"><img src="/oto1-guided-session.png" alt="A customer and guide working through a Family Safekeep together" /></div>
     </section>
+    <figure className="sorted-letter-image"><img src="/oto1-guided-session.png" alt="A customer and guide working through a Family Safekeep together" /></figure>
 
     <div className="sorted-letter-body">
       <section className="sorted-letter-section">
