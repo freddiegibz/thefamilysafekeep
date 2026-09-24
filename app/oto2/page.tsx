@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Clock3, Flower2, Laptop, Mail, Package, PawPrint, UsersRound } from 'lucide-react';
+import { Clock3 } from 'lucide-react';
 import './final-wishes.css';
 
 const checkout = 'https://buy.stripe.com/8x25kCevh9gwdGUcCebZe17';
@@ -21,13 +21,13 @@ function Countdown() {
   return <div className="fw-countdown" role="timer" aria-label="Time remaining on the special offer"><Clock3 size={17} aria-hidden="true" /><span>{String(Math.floor(seconds / 60)).padStart(2, '0')}:{String(seconds % 60).padStart(2, '0')}</span></div>;
 }
 
-const topics = [
-  { icon: Flower2, label: 'Funeral & memorial' },
-  { icon: PawPrint, label: 'Pets' },
-  { icon: Package, label: 'Personal possessions' },
-  { icon: UsersRound, label: 'People to contact' },
-  { icon: Laptop, label: 'Digital wishes' },
-  { icon: Mail, label: 'Personal messages' },
+const inside = [
+  { title: 'Funeral & Memorial Wishes', text: 'Whether you want burial or cremation, what kind of service feels right, and any music, readings or details that matter to you.' },
+  { title: 'People To Contact', text: 'Friends, relatives, former colleagues, clubs or anyone your immediate family may not otherwise know to tell.' },
+  { title: 'Pets', text: 'Who you would want to care for them, plus their routines, vet details, medication and anything else someone would need to know.' },
+  { title: 'Personal Possessions', text: 'Who you would like sentimental items or keepsakes to go to — and, if you want, why they matter.' },
+  { title: 'Digital Wishes', text: 'What you would like done with your photographs, files, social accounts and other parts of your digital life.' },
+  { title: 'Personal Messages', text: 'A private place for the words that do not belong in a will, account list or financial record.' },
 ];
 
 export default function FinalWishesPage() {
@@ -46,14 +46,12 @@ export default function FinalWishesPage() {
       <img className="fw-product-image" src="/final-wishes-pack-mockup.png" alt="The No-Guessing Final Wishes Pack in a navy presentation folder with four guided wishes cards" width="1456" height="1092" />
       <div className="fw-offer-copy">
         <h2>The No-Guessing Final Wishes Pack</h2>
-        <p>A simple set of guided cards that sits alongside your Family Safekeep and tells your family the things only you can decide.</p>
+        <p>A simple set of guided cards designed to sit alongside your Family Safekeep and record the decisions only you can make.</p>
+        <h3>Inside, you can make clear:</h3>
+        <dl className="fw-inside">{inside.map(({title, text}) => <div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl>
         <p className="fw-price">Family Safekeep customer price: <strong>$37</strong></p>
         <a className="fw-button" href={checkout}>YES — ADD MY FINAL WISHES PACK</a>
       </div>
-    </section>
-
-    <section className="fw-covers fw-shell" aria-label="What the pack covers">
-      <div className="fw-topic-grid">{topics.map(({icon: Icon, label}) => <div key={label}><Icon aria-hidden="true" strokeWidth={1.5} /><span>{label}</span></div>)}</div>
     </section>
 
     <section className="fw-contrast">
