@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Clock3, Flower2, Heart, Laptop, Mail, Package, PawPrint, UsersRound } from 'lucide-react';
+import { Clock3, Flower2, Laptop, Mail, Package, PawPrint, UsersRound } from 'lucide-react';
 import './final-wishes.css';
 
 const checkout = 'https://buy.stripe.com/8x25kCevh9gwdGUcCebZe17';
@@ -43,13 +43,7 @@ export default function FinalWishesPage() {
     </section>
 
     <section className="fw-offer fw-shell">
-      <div className="fw-product" role="img" aria-label="The No-Guessing Final Wishes Pack with four guided cards">
-        <div className="fw-book"><Heart aria-hidden="true" /><small>FAMILY SAFEKEEP</small><strong>The No-Guessing<br />Final Wishes Pack</strong><span>YOUR WISHES. THEIR CLARITY.</span></div>
-        <div className="fw-preview fw-preview-one"><Flower2 aria-hidden="true" /><span>Funeral &amp;<br />Memorial</span></div>
-        <div className="fw-preview fw-preview-two"><PawPrint aria-hidden="true" /><span>Pets</span></div>
-        <div className="fw-preview fw-preview-three"><UsersRound aria-hidden="true" /><span>People To<br />Contact</span></div>
-        <div className="fw-preview fw-preview-four"><Mail aria-hidden="true" /><span>Personal<br />Messages</span></div>
-      </div>
+      <img className="fw-product-image" src="/final-wishes-pack-mockup.png" alt="The No-Guessing Final Wishes Pack in a navy presentation folder with four guided wishes cards" width="1456" height="1092" />
       <div className="fw-offer-copy">
         <h2>The No-Guessing Final Wishes Pack</h2>
         <p>A simple set of guided cards that sits alongside your Family Safekeep and tells your family the things only you can decide.</p>
