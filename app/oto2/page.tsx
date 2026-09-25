@@ -49,7 +49,7 @@ export default function FinalWishesPage() {
         <p>A simple set of guided cards designed to sit alongside your Family Safekeep and record the decisions only you can make.</p>
         <h3>Inside, you can make clear:</h3>
         <dl className="fw-inside">{inside.map(({title, text}) => <div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl>
-        <p className="fw-price">Family Safekeep customer price: <strong>$37</strong></p>
+        <p className="fw-price">Family Safekeep customer price: <strong>$17</strong></p>
         <a className="fw-button" href={checkout}>YES — ADD MY FINAL WISHES COMPANION</a>
       </div>
     </section>
@@ -62,7 +62,7 @@ export default function FinalWishesPage() {
     </section>
 
     <section className="fw-final fw-shell">
-      <h2>Add the Final Wishes Companion for $37</h2>
+      <h2>Add the Final Wishes Companion for $17</h2>
       <a className="fw-button" href={checkout}>YES — I WANT MY FAMILY TO KNOW WHAT I WANTED</a>
       <a className="fw-decline" href="/thank-you">No thanks — I’ll continue with my Family Safekeep only.</a>
     </section>
