@@ -79,9 +79,9 @@ export default function SafekeepSortedPage() {
       </section>
       <section className="sorted-letter-offer">
         <h2>The Easiest Way To Make Sure Your Family Safekeep Does The Job You Bought It To Do.</h2>
-        <h3>Private Guided Completion — $97</h3>
+        <h3>Private Guided Completion — $57</h3>
         <p>We’ll work through your Family Safekeep with you, help you avoid the gaps and mistakes that are easy to make on your own, and stay with the process until it is properly finished and ready for your family.</p>
-        <button className="sorted-button" type="button" disabled>YES — HELP ME GET MY FAMILY SAFEKEEP FINISHED — $97 <ArrowRight aria-hidden="true" /></button>
+        <a className="sorted-button" href="https://buy.stripe.com/bJe4gy1IvboE46kcCebZe1c">YES — HELP ME GET MY FAMILY SAFEKEEP FINISHED — $57 <ArrowRight aria-hidden="true" /></a>
       </section>
       <a className="sorted-letter-decline" href="/oto2">No thanks — I’m happy to complete it myself.</a>
     </div>
