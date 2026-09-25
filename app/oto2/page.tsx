@@ -43,26 +43,26 @@ export default function FinalWishesPage() {
     </section>
 
     <section className="fw-offer fw-shell">
-      <img className="fw-product-image" src="/final-wishes-pack-mockup.png" alt="The No-Guessing Final Wishes Pack in a navy presentation folder with four guided wishes cards" width="1456" height="1092" />
+      <img className="fw-product-image" src="/final-wishes-companion-mockup.png" alt="The Final Wishes Companion in a navy presentation folder with four guided wishes cards" width="1456" height="1092" />
       <div className="fw-offer-copy">
-        <h2>The No-Guessing Final Wishes Pack</h2>
+        <h2>The Final Wishes Companion</h2>
         <p>A simple set of guided cards designed to sit alongside your Family Safekeep and record the decisions only you can make.</p>
         <h3>Inside, you can make clear:</h3>
         <dl className="fw-inside">{inside.map(({title, text}) => <div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl>
         <p className="fw-price">Family Safekeep customer price: <strong>$37</strong></p>
-        <a className="fw-button" href={checkout}>YES — ADD MY FINAL WISHES PACK</a>
+        <a className="fw-button" href={checkout}>YES — ADD MY FINAL WISHES COMPANION</a>
       </div>
     </section>
 
     <section className="fw-contrast">
       <div className="fw-shell">
-        <div className="fw-contrast-pair"><p><span>Family Safekeep:</span> where everything is</p><p><span>Final Wishes Pack:</span> what you wanted</p></div>
+        <div className="fw-contrast-pair"><p><span>Family Safekeep:</span> where everything is</p><p><span>Final Wishes Companion:</span> what you wanted</p></div>
         <h2>One removes the searching.<br />The other removes the guessing.</h2>
       </div>
     </section>
 
     <section className="fw-final fw-shell">
-      <h2>Add the Final Wishes Pack for $37</h2>
+      <h2>Add the Final Wishes Companion for $37</h2>
       <a className="fw-button" href={checkout}>YES — I WANT MY FAMILY TO KNOW WHAT I WANTED</a>
       <a className="fw-decline" href="/thank-you">No thanks — I’ll continue with my Family Safekeep only.</a>
     </section>
