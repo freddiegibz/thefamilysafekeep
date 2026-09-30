@@ -4,6 +4,8 @@ import Home from './app/page';
 import Oto1 from './app/oto1/page';
 import Oto2 from './app/oto2/page';
 import ThankYou from './app/thank-you/page';
+import NineReasons from './app/nine-reasons/page';
+import ProductPage from './app/pdp/page';
 
 const path = window.location.pathname.replace(/\/+$/, '') || '/';
 const routes = {
@@ -11,6 +13,8 @@ const routes = {
   '/oto1': {Page: Oto1, title: 'Your Safekeep, Sorted | The Family Safekeep'},
   '/oto2': {Page: Oto2, title: 'The Final Wishes Companion | The Family Safekeep'},
   '/thank-you': {Page: ThankYou, title: 'Thank You | The Family Safekeep'},
+  '/9-reasons': {Page: NineReasons, title: '9 Reasons Family Safekeep Works | The Responsible Family'},
+  '/pdp': {Page: ProductPage, title: 'The Family Safekeep | Digital Family Planner'},
 };
 const route = routes[path as keyof typeof routes];
 if (route) {

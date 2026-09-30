@@ -20,6 +20,12 @@
       }
       document.addEventListener('click', function(event) {
         var link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+        if (link && link.dataset.pixelEvent === 'AdvertorialContinue') {
+          fbq('trackCustom', 'AdvertorialContinue', {
+            content_name: 'Family Safekeep 9 Reasons',
+            destination: link.pathname
+          });
+        }
         if (link && link.hostname === 'buy.stripe.com') {
           fbq('track', 'InitiateCheckout');
         }

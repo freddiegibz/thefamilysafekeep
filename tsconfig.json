@@ -28,6 +28,7 @@
   },
   "include": [
     "app/**/*.tsx",
+    "app/**/*.d.ts",
     "components/**/*.tsx",
     "hooks/**/*.ts",
     "lib/**/*.ts",
