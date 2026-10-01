@@ -72,8 +72,8 @@ export default function NineReasons() {
         <div className="reasons-offer-copy">
           <span className="reasons-offer-eyebrow">INSTANT ACCESS | 30-DAY MONEY-BACK GUARANTEE</span>
           <h2>The Family Safekeep™<br/>“If I’m Not Here” Planner<br/><span>(Australian Digital Edition)</span></h2>
-          <p className="reasons-discount-price"><del>$44</del> <strong>$27</strong> <span>SAVE $17</span></p>
-          <p>The complete Australian Edition of Family Safekeep: fillable PDF, Notion version and a copy you can print. One payment, with lifetime updates included.</p>
+          <p className="reasons-discount-price"><del>A$64</del> <strong>A$39</strong> <span>SAVE A$25</span></p>
+          <p>The complete Australian Edition of Family Safekeep: fillable PDF, Notion version and a copy you can print. Prices in AUD. One payment, with lifetime updates included.</p>
           <OfferCountdown />
           <p className="reasons-offer-nudge"><strong>Keep a digital copy. Print one for your family.</strong></p>
           <a href="/pdp" className="reasons-cta" data-pixel-event="AdvertorialContinue">Check Availability <span aria-hidden="true">→</span></a>

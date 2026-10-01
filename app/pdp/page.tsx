@@ -41,7 +41,7 @@ const sections = [
 const faqs = [
   ['Is this designed for Australian households?', 'Yes. The Australian Edition helps you organise bank accounts, superannuation, insurance, household bills, Medicare details, important documents and digital access information in one place.'],
   ['Is this a physical planner?', 'This is a digital product. You receive a fillable PDF, a printable copy and the Notion version. Nothing is posted to you; you can print the pages yourself if you prefer to write by hand.'],
-  ['What do I receive for $27?', 'The complete Family Safekeep planner with eight organised sections, getting-started instructions and extra blank record sheets, plus the Notion version and lifetime updates. The First 48 Hours Guide is an optional $17 addition.'],
+  ['What do I receive for A$39?', 'The complete Family Safekeep planner with eight organised sections, getting-started instructions and extra blank record sheets, plus the Notion version and lifetime updates. The First 48 Hours Guide is an optional A$25 addition.'],
   ['Do I have to complete it all at once?', 'No. Start with the information you already know, such as an emergency contact or the location of an insurance policy. Leave yourself a note for anything you need to check, then come back to it when you have time.'],
   ['Can I keep a copy for both of us?', 'You can record the household’s information and identify who each account, policy or record belongs to. Use the extra blank sheets when you need another entry. Keep completed copies private and agree with your trusted person where they will be stored.'],
   ['Do I need special software?', 'To type into the PDF, download it and open it in a PDF reader that supports fillable forms. Save your completed copy as you go. You can also print the sheets and use a pen. The Notion version is used in your own Notion workspace.'],
@@ -63,7 +63,7 @@ function OfferTimer() {
 export default function ProductPage() {
   const [slide, setSlide] = useState(0);
   const [bundle, setBundle] = useState(false);
-  const price = bundle ? 44 : 27;
+  const price = bundle ? 64 : 39;
   const link = bundle ? bundleCheckout : checkout;
   return <main className="pdp-page">
     <div className="pdp-announcement">INSTANT DIGITAL ACCESS <span>·</span> 30-DAY MONEY-BACK GUARANTEE</div>
@@ -94,19 +94,19 @@ export default function ProductPage() {
           <div className="pdp-offer-heading" id="package-options"><span>CHOOSE YOUR PACKAGE</span></div>
           <fieldset className="pdp-options"><legend className="pdp-sr-only">Choose your digital package</legend>
             <label className={`pdp-option pdp-package-card ${!bundle?'is-selected':''}`}>
-              <input type="radio" name="pdp-package" aria-label="Family Safekeep only — $27" checked={!bundle} onChange={()=>setBundle(false)}/>
+              <input type="radio" name="pdp-package" aria-label="Family Safekeep only — A$39" checked={!bundle} onChange={()=>setBundle(false)}/>
               <span className="pdp-package-heading"><strong>Family Safekeep Only</strong><small>The complete digital planner in all three formats.</small></span>
-              <span className="pdp-package-total"><del>$44</del><strong>$27</strong><small>one payment</small></span>
+              <span className="pdp-package-total"><del>A$64</del><strong>A$39</strong><small>one payment</small></span>
             </label>
             <label className={`pdp-option pdp-package-card ${bundle?'is-selected':''}`}>
-              <input type="radio" name="pdp-package" aria-label="Family Safekeep plus First 48 Hours Guide — $44" checked={bundle} onChange={()=>setBundle(true)}/>
+              <input type="radio" name="pdp-package" aria-label="Family Safekeep plus First 48 Hours Guide — A$64" checked={bundle} onChange={()=>setBundle(true)}/>
               <span className="pdp-package-heading"><span className="pdp-popular-badge">Most Popular</span><strong>Family Safekeep<br/>+ First 48 Hours Guide</strong><small>The complete planner, plus their guide to what comes next.</small></span>
-              <span className="pdp-package-total"><del>$72</del><strong>$44</strong><small>one payment</small></span>
+              <span className="pdp-package-total"><del>A$104</del><strong>A$64</strong><small>one payment</small></span>
               <span className="pdp-package-details">
                 <span className="pdp-guide-description">When something happens, shock makes even simple decisions hard.</span>
                 <strong className="pdp-guide-emphasis">This guide is the clear head they need when theirs isn’t working.</strong>
                 <span className="pdp-guide-description">Who to call first, what not to touch yet, and what needs doing in those first 48 hours.</span>
-                <span className="pdp-guide-price">Guide: <del>$37</del><strong>Only +$17</strong></span>
+                <span className="pdp-guide-price">Guide: <del>A$54</del><strong>Only +A$25</strong></span>
               </span>
             </label>
           </fieldset>
@@ -116,9 +116,9 @@ export default function ProductPage() {
             <figcaption>— Helen M.</figcaption>
           </figure>
           <OfferTimer/>
-          <a className="pdp-buy" href={link}>{bundle ? 'Get the Planner + Guide' : 'Get the Planner'} — ${price}<ArrowRight size={20}/></a>
+          <a className="pdp-buy" href={link}>{bundle ? 'Get the Planner + Guide' : 'Get the Planner'} — A${price}<ArrowRight size={20}/></a>
           <p className="pdp-delivery"><span aria-hidden="true"/>Digital download. Ready after checkout.</p>
-          <p className="pdp-currency">Prices in USD · One payment · No subscription</p>
+          <p className="pdp-currency">Prices in AUD · One payment · No subscription</p>
           <div className="pdp-trust"><span><Download/>Instant access</span><span><Printer/>Print at home</span><span><ShieldCheck/>30-day guarantee</span></div>
           <div className="pdp-product-details">
             <details open id="inside"><summary>What’s Inside Your Family Safekeep?<span>+</span></summary><p>A place for the details that help someone understand your household, even when they can’t ask you.</p><ul>{sections.map(([number,title])=><li key={number}>{title}</li>)}</ul><p>Includes getting-started instructions and extra blank record sheets. Complete it on screen or print it at home.</p></details>
@@ -170,8 +170,8 @@ export default function ProductPage() {
       <p>Try it for 30 days. If it doesn’t cover what your family needs, we’ll refund every cent. Reply to your purchase email to get in touch.</p>
     </section>
     <section className="pdp-section pdp-faq-section" id="pdp-faq"><div className="pdp-container"><div className="pdp-section-heading"><h2>FAQ</h2></div><div className="pdp-faq">{faqs.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
-    <section className="pdp-final"><p className="pdp-eyebrow">FOR THE PEOPLE YOU LOVE</p><h2>One place to leave the answers.</h2><p>{bundle ? 'Complete planner + First 48 Hours Guide.' : 'Complete digital planner. Every format.'} ${price}. One payment.</p><a href="#package-options" className="pdp-buy">Get Instant Access — ${price}<ArrowRight size={20}/></a><small>Instant download · Printable copy · 30-day money-back guarantee</small></section>
+    <section className="pdp-final"><p className="pdp-eyebrow">FOR THE PEOPLE YOU LOVE</p><h2>One place to leave the answers.</h2><p>{bundle ? 'Complete planner + First 48 Hours Guide.' : 'Complete digital planner. Every format.'} A${price}. One payment.</p><a href="#package-options" className="pdp-buy">Get Instant Access — A${price}<ArrowRight size={20}/></a><small>Instant download · Printable copy · 30-day money-back guarantee</small></section>
     <footer className="pdp-footer"><span className="pdp-brand">FAMILY SAFEKEEP</span><span>© 2026 The Family Safekeep</span><a href="#pdp-faq">Delivery & guarantee</a></footer>
-    <div className="pdp-sticky-buy"><div><strong>The Family Safekeep</strong><span>${price} · Instant digital access</span></div><a href="#package-options">Get Instant Access<ArrowRight size={17}/></a></div>
+    <div className="pdp-sticky-buy"><div><strong>The Family Safekeep</strong><span>A${price} · Instant digital access</span></div><a href="#package-options">Get Instant Access<ArrowRight size={17}/></a></div>
   </main>;
 }
