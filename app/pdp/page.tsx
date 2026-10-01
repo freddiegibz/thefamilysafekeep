@@ -100,7 +100,7 @@ export default function ProductPage() {
             </label>
             <label className={`pdp-option pdp-package-card ${bundle?'is-selected':''}`}>
               <input type="radio" name="pdp-package" aria-label="Family Safekeep plus First 48 Hours Guide — $44" checked={bundle} onChange={()=>setBundle(true)}/>
-              <span className="pdp-package-heading"><strong>Family Safekeep<br/>+ First 48 Hours Guide</strong><small>The complete planner, plus their guide to what comes next.</small></span>
+              <span className="pdp-package-heading"><span className="pdp-popular-badge">Most Popular</span><strong>Family Safekeep<br/>+ First 48 Hours Guide</strong><small>The complete planner, plus their guide to what comes next.</small></span>
               <span className="pdp-package-total"><del>$72</del><strong>$44</strong><small>one payment</small></span>
               <span className="pdp-package-details">
                 <span className="pdp-guide-description">When something happens, shock makes even simple decisions hard.</span>
