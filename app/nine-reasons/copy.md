@@ -58,21 +58,25 @@ Somebody else may not.
 
 Family Safekeep is organised so another person can understand what exists, where it is and what they may need to do next, without already knowing the household.
 
-## 8. It can change when your life changes
+## 8. You have thirty days to decide it is not for you
 
-The problem with the folder in the drawer is that life moves on while the folder stays the same. The insurer changes. The mortgage moves. The phone gets replaced. An email address disappears.
+Let me be straightforward, because you may have bought a planner before and it is sitting in a drawer right now.
 
-Because Family Safekeep is digital, it can be updated as those things change instead of becoming a snapshot of how the household looked years ago.
+Take thirty days with Family Safekeep. Open it, work through the first section, the one about the phone, and see whether the questions are the ones your family would actually need answered.
 
-## 9. It records the ordinary things nobody thinks to write down
+If it is not the one, ask for a refund. **Every cent is refunded, and there is nothing to post back or pay to return.**
 
-Families eventually need more than bank details.
+That is a fair way to find out whether this is the planner you will finally fill in.
 
-They may need the vet who knows the dog’s history, the plumber you trust, the neighbour with the spare key, the subscriptions still running, or the place where an important document is actually kept.
+## 9. The families who arrive with one completed are out in weeks, not months
 
-Those things feel unimportant while there is somebody there to answer the question. That is exactly why they are so often never written down.
+I can tell within ten minutes of meeting a family whether somebody wrote things down.
 
-Family Safekeep is designed so the family is not left reconstructing the household one small mystery at a time.
+The ones who did are through the practical work in a couple of weeks, and they spend the rest of the time doing what they should be doing: being with each other, remembering the person they have lost, and taking the time they need.
+
+The ones who did not are still making phone calls months later, trying to find out what exists, who to contact and where the answers were kept.
+
+When a family comes through my door with Family Safekeep completed, **the difference is not subtle.** They have somewhere to start, instead of another list of questions nobody can answer.
 
 When the practical information has been properly handed over, the difference is simple.
 
