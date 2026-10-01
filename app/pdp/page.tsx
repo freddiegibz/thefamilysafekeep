@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {ArrowRight, Check, ChevronLeft, ChevronRight, Download, ShieldCheck, Printer} from 'lucide-react';
 import './pdp.css';
+import landingCopy from '../safekeep-copy.json';
 
 const checkout = 'https://buy.stripe.com/fZu6oG86TakA46kcCebZe1e';
 const bundleCheckout = 'https://buy.stripe.com/6oU28q0Er8csbyMfOqbZe1d';
@@ -91,25 +92,17 @@ export default function ProductPage() {
           <div className="pdp-rating" aria-label="Rated 4.7 out of 5 from 539 reviews"><span className="pdp-rating-stars" aria-hidden="true">★★★★★</span><span>4.7 / 539 reviews</span></div>
           <p className="pdp-format-line">Fillable PDF · Printable copy · Instant Delivery</p>
           <ul className="pdp-benefits"><li><Check/>Eliminates 1,200+ hours of administrative detective work</li><li><Check/>Prevents digital lockout from photos, accounts &amp; memories</li><li><Check/>Written to feel calm, human &amp; surprisingly comforting</li></ul>
-          <div className="pdp-offer-heading" id="package-options"><span>CHOOSE YOUR PACKAGE</span></div>
-          <fieldset className="pdp-options"><legend className="pdp-sr-only">Choose your digital package</legend>
-            <label className={`pdp-option pdp-package-card ${!bundle?'is-selected':''}`}>
-              <input type="radio" name="pdp-package" aria-label="Family Safekeep only — A$39" checked={!bundle} onChange={()=>setBundle(false)}/>
-              <span className="pdp-package-heading"><strong>Family Safekeep Only</strong><small>The complete digital planner in all three formats.</small></span>
-              <span className="pdp-package-total"><del>A$64</del><strong>A$39</strong><small>one payment</small></span>
-            </label>
-            <label className={`pdp-option pdp-package-card ${bundle?'is-selected':''}`}>
-              <input type="radio" name="pdp-package" aria-label="Family Safekeep plus First 48 Hours Guide — A$64" checked={bundle} onChange={()=>setBundle(true)}/>
-              <span className="pdp-package-heading"><span className="pdp-popular-badge">Most Popular</span><strong>Family Safekeep<br/>+ First 48 Hours Guide</strong><small>The complete planner, plus their guide to what comes next.</small></span>
-              <span className="pdp-package-total"><del>A$104</del><strong>A$64</strong><small>one payment</small></span>
-              <span className="pdp-package-details">
-                <span className="pdp-guide-description">When something happens, shock makes even simple decisions hard.</span>
-                <strong className="pdp-guide-emphasis">This guide is the clear head they need when theirs isn’t working.</strong>
-                <span className="pdp-guide-description">Who to call first, what not to touch yet, and what needs doing in those first 48 hours.</span>
-                <span className="pdp-guide-price">Guide: <del>A$54</del><strong>Only +A$25</strong></span>
+          <div className="pdp-base-offer" id="package-options"><div><strong>Family Safekeep</strong><small>The complete digital planner in all three formats.</small></div><span><del>A$64</del><strong>A$39</strong></span></div>
+          <div className="pdp-options">
+            <label className={`pdp-option pdp-guide-option ${bundle?'is-selected':''}`}>
+              <input type="checkbox" aria-label="Add The First 48 Hours Guide for A$25" checked={bundle} onChange={event=>setBundle(event.target.checked)}/>
+              <span className="pdp-option-copy">
+                <strong>{landingCopy.bump.title}</strong>
+                {landingCopy.bump.paragraphs.map((text,index)=><span key={text} className={index===1?'pdp-guide-emphasis':'pdp-guide-description'}>{index===1?<strong>{text}</strong>:text}</span>)}
+                <span className="pdp-guide-price"><del>A$54</del><strong>Only +A$25</strong></span>
               </span>
             </label>
-          </fieldset>
+          </div>
           <a className="pdp-buy" href={link}>{bundle ? 'Get the Planner + Guide' : 'Get the Planner'} — A${price}<ArrowRight size={20}/></a>
           <p className="pdp-delivery"><span aria-hidden="true"/>Digital download. Ready after checkout.</p>
           <p className="pdp-currency">Prices in AUD · One payment · No subscription</p>
