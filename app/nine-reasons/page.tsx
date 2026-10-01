@@ -2,6 +2,18 @@ import {useEffect, useState} from 'react';
 import source from './copy.md?raw';
 import './reasons.css';
 
+function reasonImage(index: number) {
+  return index === 4 ? '/reasons/05-australian-v1.webp' : `/reasons/${String(index + 1).padStart(2, '0')}.webp`;
+}
+
+function AdvertorialImage({src, alt, first = false, offer = false}: {src: string; alt: string; first?: boolean; offer?: boolean}) {
+  const width = offer ? 960 : 1200;
+  return <img src={src} srcSet={`${src.replace('.webp', '-640.webp')} 640w, ${src} ${width}w`}
+    sizes={offer ? '(max-width: 620px) 320px, 240px' : '(max-width: 620px) calc(100vw - 36px), (max-width: 800px) calc(100vw - 48px), 752px'}
+    width={width} height={offer ? 1200 : 800} alt={alt}
+    loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" />;
+}
+
 function OfferCountdown() {
   const [deadline] = useState(() => Date.now() + 15 * 60 * 1000);
   const [secondsLeft, setSecondsLeft] = useState(() => Math.max(0, Math.ceil((deadline - Date.now()) / 1000)));
@@ -35,11 +47,11 @@ export default function NineReasons() {
       <div className="reasons-intro">
         <p className="reasons-eyebrow">{clean(lines[0])}</p>
         <h1>{clean(lines[2])}</h1>
-        <div className="reasons-author"><img className="reasons-avatar" src="/sienna-cunningham.png" alt="Portrait of Sienna Cunningham" /><span><strong>{clean(lines[3])}</strong><small>{lines[4]}</small></span></div>
+        <div className="reasons-author"><img className="reasons-avatar" src="/sienna-cunningham.webp" width="117" height="156" alt="Portrait of Sienna Cunningham" decoding="async" /><span><strong>{clean(lines[3])}</strong><small>{lines[4]}</small></span></div>
         <p className="reasons-summary">{inline(lines[5])}</p>
       </div>
       {reasons.map((reason, index) => <section className="reasons-section" key={reason.number}>
-        <figure className="reasons-image"><img src={index === 4 ? '/reasons/05-australian-v1.png' : `/reasons/${String(index + 1).padStart(2, '0')}.png`} alt={[
+        <figure className="reasons-image"><AdvertorialImage src={reasonImage(index)} first={index === 0} alt={[
           'A family member starting with a phone and account information',
           'The steps needed after entering an account password',
           'A household inventory of accounts and policies',
@@ -49,7 +61,7 @@ export default function NineReasons() {
           'A family member using organised information',
           'Updating family information as life changes',
           'The everyday details that help a family run a household'
-        ][index]} loading="lazy" /></figure>
+        ][index]} /></figure>
         <h2>{reason.title}</h2>
         {reason.paragraphs.map((paragraph, i) => <p key={i}>{inline(paragraph)}</p>)}
       </section>)}
@@ -66,7 +78,7 @@ export default function NineReasons() {
           <div className="reasons-offer-trust"><span>INSTANT DOWNLOAD</span><span>PDF + NOTION</span><span>30-DAY GUARANTEE</span></div>
           <p className="reasons-offer-guarantee">Try it for 30 days. If it isn’t right for you, ask for a full refund. Every cent back.</p>
         </div>
-        <img src="/pdp/advertorial-planner-natural-v1.png" alt="The Family Safekeep planner and printed worksheets on a kitchen table" />
+        <AdvertorialImage src="/pdp/advertorial-planner-natural-v1.webp" alt="The Family Safekeep planner and printed worksheets on a kitchen table" offer />
       </aside>
     </article>
     <footer className="reasons-footer">© 2026 The Family Safekeep</footer>
