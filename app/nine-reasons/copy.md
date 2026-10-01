@@ -8,7 +8,7 @@
 
 August 29, 2026 · 6 min read · Funeral Director, 23 years
 
-**Summary:** After twenty-three years sitting with families during the first weeks after a death, I have learned that most people are not completely unprepared. There is usually a will. There are usually folders, passwords and notes somewhere. What is missing is the practical map of the life underneath them. These nine reasons show how Family Safekeep gives families that map for $27.
+**Summary:** After twenty-three years sitting with Australian families on the worst week of their lives, I started testing the planners they brought with them. Line by line, account by account. Almost every one stalled in the same place, and it was never the part people worry about. Here is what the one that actually works does differently.
 
 ## 1. It starts where the family actually starts
 
