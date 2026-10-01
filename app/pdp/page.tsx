@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react';
 import {ArrowRight, Check, ChevronLeft, ChevronRight, Download, ShieldCheck, Printer} from 'lucide-react';
 import './pdp.css';
 
-const checkout = 'https://buy.stripe.com/9B6fZg4UHcsI1Yc0TwbZe15';
-const bundleCheckout = 'https://buy.stripe.com/8x214mgDpakAauI9q2bZe16';
+const checkout = 'https://buy.stripe.com/fZu6oG86TakA46kcCebZe1e';
+const bundleCheckout = 'https://buy.stripe.com/6oU28q0Er8csbyMfOqbZe1d';
 const productImageSizes = '(max-width: 650px) calc(100vw - 40px), (max-width: 1280px) calc((100vw - 102px) / 2), 600px';
 
 function ProductImage({src, alt, priority = false, lifestyle = false}: {src: string; alt: string; priority?: boolean; lifestyle?: boolean}) {
