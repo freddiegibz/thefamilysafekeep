@@ -21,15 +21,25 @@
       document.addEventListener('click', function(event) {
         var link = event.target instanceof Element ? event.target.closest('a[href]') : null;
         if (link && link.dataset.pixelEvent === 'AdvertorialContinue') {
-          fbq('trackCustom', 'AdvertorialContinue', {
-            content_name: 'Family Safekeep 9 Reasons',
-            destination: link.pathname
-          });
+          var continueInSameTab = !event.defaultPrevented && event.button === 0 &&
+            !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey &&
+            (!link.target || link.target === '_self') && !link.hasAttribute('download');
+          if (continueInSameTab) event.preventDefault();
+          try {
+            fbq('trackCustom', 'AdvertorialContinue', {
+              content_name: 'Family Safekeep 9 Reasons',
+              destination: link.pathname
+            });
+          } finally {
+            if (continueInSameTab) {
+              window.setTimeout(function() { window.location.assign(link.href); }, 350);
+            }
+          }
         }
         if (link && link.hostname === 'buy.stripe.com') {
           fbq('track', 'InitiateCheckout');
         }
-      });
+      }, true);
     </script>
     <!-- End Meta Pixel Code -->
     <meta name="description" content="One clear family hand-off. The If I’m Not Here digital binder. PDF and Notion for $27." />
