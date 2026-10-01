@@ -4,19 +4,29 @@ import './pdp.css';
 
 const checkout = 'https://buy.stripe.com/9B6fZg4UHcsI1Yc0TwbZe15';
 const bundleCheckout = 'https://buy.stripe.com/8x214mgDpakAauI9q2bZe16';
+const productImageSizes = '(max-width: 650px) calc(100vw - 40px), (max-width: 1280px) calc((100vw - 102px) / 2), 600px';
+
+function ProductImage({src, alt, priority = false, lifestyle = false}: {src: string; alt: string; priority?: boolean; lifestyle?: boolean}) {
+  const width = lifestyle ? 1122 : 1254;
+  return <img src={src} srcSet={`${src.replace('.webp', '-640.webp')} 640w, ${src} ${width}w`}
+    sizes={lifestyle ? '(max-width: 650px) calc((100vw - 40px) * .77), (max-width: 1280px) calc((100vw - 104px) / 3), 400px' : productImageSizes}
+    width={width} height={lifestyle ? 1402 : 1254} alt={alt}
+    loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} decoding="async" />;
+}
+
 const lifestyleImages = [
-  {src:'/pdp/lifestyle-couple.png', alt:'A couple working through printed planner sheets together at their kitchen table'},
-  {src:'/pdp/lifestyle-digital-v2.png', alt:'A mother and daughter using the digital planner on a laptop'},
-  {src:'/pdp/lifestyle-print.png', alt:'A woman writing on printed planner sheets with a tablet beside her'},
+  {src:'/pdp/lifestyle-couple.webp', alt:'A couple working through printed planner sheets together at their kitchen table'},
+  {src:'/pdp/lifestyle-digital-v2.webp', alt:'A mother and daughter using the digital planner on a laptop'},
+  {src:'/pdp/lifestyle-print.webp', alt:'A woman writing on printed planner sheets with a tablet beside her'},
 ];
 const gallery = [
-  {kind:'artwork', src:'/pdp/hero-australian-simple-v3.png', alt:'Family Safekeep Australian Edition planner on a tablet with two printed worksheets and a 30-day money-back guarantee', label:'Complete planner', note:'Fillable PDF + printable copy + Notion version. All included.'},
-  {kind:'artwork', src:'/pdp/hero-passwords-v1.png', alt:'Your passwords aren’t transferable: Family Safekeep verification codes and authenticator apps', label:'Digital access', note:''},
-  {kind:'artwork', src:'/pdp/hero-everything-paper-au-v1.png', alt:'Everything in one place: phone access, passwords, bank accounts, bills, insurance, assets and emergency contacts', label:'What’s inside', note:''},
-  {kind:'artwork', src:'/pdp/hero-love-v1.png', alt:'The final act of love: a practical roadmap for your family, with guided phone access pages', label:'For your family', note:''},
-  {kind:'artwork', src:'/pdp/hero-mary-v1.png', alt:'Mary M. holding the digital Family Safekeep planner, alongside her five-star review', label:'Mary’s review', note:''},
-  {kind:'artwork', src:'/pdp/hero-guided-v1.png', alt:'Expertly planned, effortlessly filled: guided prompts and yearly update sections', label:'Guided prompts', note:''},
-  {kind:'artwork', src:'/pdp/hero-guarantee-australian-v1.png', alt:'Try it free for 30 days: every cent refunded if it doesn’t cover what your family needs', label:'30-day guarantee', note:''},
+  {kind:'artwork', src:'/pdp/hero-australian-simple-v3.webp', alt:'Family Safekeep Australian Edition planner on a tablet with two printed worksheets and a 30-day money-back guarantee', label:'Complete planner', note:'Fillable PDF + printable copy + Notion version. All included.'},
+  {kind:'artwork', src:'/pdp/hero-passwords-v1.webp', alt:'Your passwords aren’t transferable: Family Safekeep verification codes and authenticator apps', label:'Digital access', note:''},
+  {kind:'artwork', src:'/pdp/hero-everything-paper-au-v1.webp', alt:'Everything in one place: phone access, passwords, bank accounts, bills, insurance, assets and emergency contacts', label:'What’s inside', note:''},
+  {kind:'artwork', src:'/pdp/hero-love-v1.webp', alt:'The final act of love: a practical roadmap for your family, with guided phone access pages', label:'For your family', note:''},
+  {kind:'artwork', src:'/pdp/hero-mary-v1.webp', alt:'Mary M. holding the digital Family Safekeep planner, alongside her five-star review', label:'Mary’s review', note:''},
+  {kind:'artwork', src:'/pdp/hero-guided-v1.webp', alt:'Expertly planned, effortlessly filled: guided prompts and yearly update sections', label:'Guided prompts', note:''},
+  {kind:'artwork', src:'/pdp/hero-guarantee-australian-v1.webp', alt:'Try it free for 30 days: every cent refunded if it doesn’t cover what your family needs', label:'30-day guarantee', note:''},
 ];
 const sections = [
   ['01','Accounts','Banks, savings, superannuation and borrowing. What exists, what it is for and where to find it.'],
@@ -67,13 +77,13 @@ export default function ProductPage() {
         <div className="pdp-gallery">
           <div className={`pdp-gallery-main pdp-gallery-${gallery[slide].kind}`}>
             {gallery[slide].kind==='product' && <div className="pdp-gallery-title"><h2>SAVE $8</h2><p>Your complete digital planner. Every format.</p></div>}
-            <img src={gallery[slide].src} alt={gallery[slide].alt}/>
+            <ProductImage src={gallery[slide].src} alt={gallery[slide].alt} priority />
             <button className="pdp-gallery-arrow pdp-gallery-prev" aria-label="Previous product image" onClick={()=>setSlide((slide+gallery.length-1)%gallery.length)}><ChevronLeft size={20}/></button>
             <button className="pdp-gallery-arrow pdp-gallery-next" aria-label="Next product image" onClick={()=>setSlide((slide+1)%gallery.length)}><ChevronRight size={20}/></button>
             {gallery[slide].kind==='product' && <div className="pdp-gallery-formats"><span>FILLABLE PDF</span><span>PRINTABLE</span><span>NOTION</span></div>}
           </div>
           <p className="pdp-gallery-caption" aria-live="polite">{gallery[slide].note || `Image ${slide + 1} of ${gallery.length}`}</p>
-          <div className="pdp-thumbnails" aria-label="Product images">{gallery.map((item,index)=><button key={item.src} aria-label={`View ${item.label}`} aria-pressed={slide===index} onClick={()=>setSlide(index)}><img src={item.src} alt=""/><span>{item.label}</span></button>)}</div>
+          <div className="pdp-thumbnails" aria-label="Product images">{gallery.map((item,index)=><button key={item.src} aria-label={`View ${item.label}`} aria-pressed={slide===index} onClick={()=>setSlide(index)}><img src={item.src.replace('.webp', '-thumb.webp')} width="160" height="160" alt="" decoding="async"/><span>{item.label}</span></button>)}</div>
           <div className="pdp-gallery-note"><ShieldCheck size={17}/><span>Your details stay in the copy you complete and control.</span></div>
         </div>
         <div className="pdp-purchase" id="purchase">
@@ -117,10 +127,10 @@ export default function ProductPage() {
         </div>
       </section>
     </div>
-    <section className="pdp-people pdp-container"><h2>Real Families.<br/><strong>Real Peace Of Mind</strong></h2><div className="pdp-people-photos">{lifestyleImages.map(item=><figure key={item.src}><img src={item.src} alt={item.alt} loading="lazy"/></figure>)}</div></section>
+    <section className="pdp-people pdp-container"><h2>Real Families.<br/><strong>Real Peace Of Mind</strong></h2><div className="pdp-people-photos">{lifestyleImages.map(item=><figure key={item.src}><ProductImage src={item.src} alt={item.alt} lifestyle /></figure>)}</div></section>
     <section className="pdp-reference-feature pdp-container" id="how-it-works">
       <div className="pdp-split">
-        <img src="/pdp/section-flatlay-paper-au-v1.png" alt="Family Safekeep digital covers and guided PDF pages arranged on a wooden table" loading="lazy"/>
+        <ProductImage src="/pdp/section-flatlay-paper-au-v1.webp" alt="Family Safekeep digital covers and guided PDF pages arranged on a wooden table" />
         <div>
           <p className="pdp-eyebrow">ONE WEEKEND. COMPLETE PEACE OF MIND.</p>
           <h2><strong>Easy To Fill Out.</strong><br/>Impossible To Skip</h2>
@@ -142,7 +152,7 @@ export default function ProductPage() {
           <p>This can’t be hacked. It stays exactly where your family needs it.</p>
           <p><em><strong>Store it safe and secure. Let them know. Sleep easy.</strong></em></p>
         </div>
-        <img src="/pdp/section-desk-australian-v1.png" alt="Family Safekeep digital planner on a tablet in a warmly lit home study" loading="lazy"/>
+        <ProductImage src="/pdp/section-desk-australian-v1.webp" alt="Family Safekeep digital planner on a tablet in a warmly lit home study" />
       </div>
     </section>
     <section className="pdp-community pdp-container">

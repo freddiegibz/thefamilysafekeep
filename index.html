@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      if (window.location.pathname.replace(/\/+$/, '') === '/pdp') {
+        var heroPreload = document.createElement('link');
+        heroPreload.rel = 'preload';
+        heroPreload.as = 'image';
+        heroPreload.href = '/pdp/hero-australian-simple-v3.webp';
+        heroPreload.imageSrcset = '/pdp/hero-australian-simple-v3-640.webp 640w, /pdp/hero-australian-simple-v3.webp 1254w';
+        heroPreload.imageSizes = '(max-width: 650px) calc(100vw - 40px), (max-width: 1280px) calc((100vw - 102px) / 2), 600px';
+        heroPreload.fetchPriority = 'high';
+        document.head.appendChild(heroPreload);
+      }
+    </script>
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
