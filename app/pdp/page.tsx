@@ -110,16 +110,16 @@ export default function ProductPage() {
               </span>
             </label>
           </fieldset>
+          <a className="pdp-buy" href={link}>{bundle ? 'Get the Planner + Guide' : 'Get the Planner'} — A${price}<ArrowRight size={20}/></a>
+          <p className="pdp-delivery"><span aria-hidden="true"/>Digital download. Ready after checkout.</p>
+          <p className="pdp-currency">Prices in AUD · One payment · No subscription</p>
+          <div className="pdp-trust"><span><Download/>Instant access</span><span><Printer/>Print at home</span><span><ShieldCheck/>30-day guarantee</span></div>
           <figure className="pdp-guide-testimonial">
             <div className="pdp-guide-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
             <blockquote>“After Dad died, we had his paperwork but no idea what to do first. I added the guide for my own family because having the information is one thing. Knowing where to start when you can’t think straight is another.”</blockquote>
             <figcaption>— Helen M.</figcaption>
           </figure>
           <OfferTimer/>
-          <a className="pdp-buy" href={link}>{bundle ? 'Get the Planner + Guide' : 'Get the Planner'} — A${price}<ArrowRight size={20}/></a>
-          <p className="pdp-delivery"><span aria-hidden="true"/>Digital download. Ready after checkout.</p>
-          <p className="pdp-currency">Prices in AUD · One payment · No subscription</p>
-          <div className="pdp-trust"><span><Download/>Instant access</span><span><Printer/>Print at home</span><span><ShieldCheck/>30-day guarantee</span></div>
           <div className="pdp-product-details">
             <details open id="inside"><summary>What’s Inside Your Family Safekeep?<span>+</span></summary><p>A place for the details that help someone understand your household, even when they can’t ask you.</p><ul>{sections.map(([number,title])=><li key={number}>{title}</li>)}</ul><p>Includes getting-started instructions and extra blank record sheets. Complete it on screen or print it at home.</p></details>
             <details><summary>Delivery & money-back guarantee<span>+</span></summary><p>Your download is available after purchase. This is a digital planner; no physical book is shipped. Try it for 30 days. If it isn’t right for you, reply to your purchase email for a full refund.</p></details>
