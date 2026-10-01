@@ -9,7 +9,7 @@ function reasonImage(index: number) {
 function AdvertorialImage({src, alt, first = false, offer = false}: {src: string; alt: string; first?: boolean; offer?: boolean}) {
   const width = offer ? 960 : 1200;
   return <img src={src} srcSet={`${src.replace('.webp', '-640.webp')} 640w, ${src} ${width}w`}
-    sizes={offer ? '(max-width: 620px) 320px, 240px' : '(max-width: 620px) calc(100vw - 36px), (max-width: 800px) calc(100vw - 48px), 752px'}
+    sizes={offer ? '(max-width: 620px) 320px, 240px' : '(min-width: 768px) 200px, (max-width: 620px) calc(100vw - 36px), calc(100vw - 48px)'}
     width={width} height={offer ? 1200 : 800} alt={alt}
     loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" />;
 }
@@ -62,8 +62,10 @@ export default function NineReasons() {
           'Updating family information as life changes',
           'The everyday details that help a family run a household'
         ][index]} /></figure>
-        <h2>{reason.title}</h2>
-        {reason.paragraphs.map((paragraph, i) => <p key={i}>{inline(paragraph)}</p>)}
+        <div className="reasons-section-copy">
+          <h2>{reason.title}</h2>
+          {reason.paragraphs.map((paragraph, i) => <p key={i}>{inline(paragraph)}</p>)}
+        </div>
       </section>)}
       <div className="reasons-close">{closing.map((paragraph, i) => <p key={i}>{paragraph}</p>)}</div>
       <aside className="reasons-offer">
