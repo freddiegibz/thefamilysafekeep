@@ -10,8 +10,8 @@ import ProductPage from './app/pdp/page';
 const path = window.location.pathname.replace(/\/+$/, '') || '/';
 const routes = {
   '/': {Page: Home, title: 'The Family Safekeep | Give your family a place to start'},
-  '/oto1': {Page: Oto1, title: 'Your Safekeep, Sorted | The Family Safekeep'},
-  '/oto2': {Page: Oto2, title: 'The Final Wishes Companion | The Family Safekeep'},
+  '/oto1': {Page: Oto2, title: 'The Final Wishes Companion | The Family Safekeep'},
+  '/oto2': {Page: Oto1, title: 'Your Safekeep, Sorted | The Family Safekeep'},
   '/thank-you': {Page: ThankYou, title: 'Thank You | The Family Safekeep'},
   '/9-reasons': {Page: NineReasons, title: '9 Reasons Family Safekeep Works | The Responsible Family'},
   '/pdp': {Page: ProductPage, title: 'The Family Safekeep | Digital Family Planner'},

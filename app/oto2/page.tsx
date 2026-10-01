@@ -64,7 +64,7 @@ export default function FinalWishesPage() {
     <section className="fw-final fw-shell">
       <h2>Add the Final Wishes Companion for $17</h2>
       <a className="fw-button" href={checkout}>YES — I WANT MY FAMILY TO KNOW WHAT I WANTED</a>
-      <a className="fw-decline" href="/thank-you">No thanks — I’ll continue with my Family Safekeep only.</a>
+      <a className="fw-decline" href="/oto2">No thanks — continue to the next step.</a>
     </section>
   </main>;
 }

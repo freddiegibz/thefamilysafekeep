@@ -83,7 +83,7 @@ export default function SafekeepSortedPage() {
         <p>We’ll work through your Family Safekeep with you, help you avoid the gaps and mistakes that are easy to make on your own, and stay with the process until it is properly finished and ready for your family.</p>
         <a className="sorted-button" href="https://buy.stripe.com/bJe4gy1IvboE46kcCebZe1c">YES — HELP ME GET MY FAMILY SAFEKEEP FINISHED — $57 <ArrowRight aria-hidden="true" /></a>
       </section>
-      <a className="sorted-letter-decline" href="/oto2">No thanks — I’m happy to complete it myself.</a>
+      <a className="sorted-letter-decline" href="/thank-you">No thanks — I’m happy to complete it myself.</a>
     </div>
   </main>;
 }
