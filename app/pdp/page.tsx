@@ -91,7 +91,7 @@ export default function ProductPage() {
           <div className="pdp-rating" aria-label="Rated 4.7 out of 5 from 539 reviews"><span className="pdp-rating-stars" aria-hidden="true">★★★★★</span><span>4.7 / 539 reviews</span></div>
           <p className="pdp-format-line">Fillable PDF · Printable copy · Instant Delivery</p>
           <ul className="pdp-benefits"><li><Check/>Eliminates 1,200+ hours of administrative detective work</li><li><Check/>Prevents digital lockout from photos, accounts &amp; memories</li><li><Check/>Written to feel calm, human &amp; surprisingly comforting</li></ul>
-          <div className="pdp-offer-heading"><span>CHOOSE YOUR PACKAGE</span></div>
+          <div className="pdp-offer-heading" id="package-options"><span>CHOOSE YOUR PACKAGE</span></div>
           <fieldset className="pdp-options"><legend className="pdp-sr-only">Choose your digital package</legend>
             <label className={`pdp-option pdp-package-card ${!bundle?'is-selected':''}`}>
               <input type="radio" name="pdp-package" aria-label="Family Safekeep only — $27" checked={!bundle} onChange={()=>setBundle(false)}/>
@@ -170,8 +170,8 @@ export default function ProductPage() {
       <p>Try it for 30 days. If it doesn’t cover what your family needs, we’ll refund every cent. Reply to your purchase email to get in touch.</p>
     </section>
     <section className="pdp-section pdp-faq-section" id="pdp-faq"><div className="pdp-container"><div className="pdp-section-heading"><h2>FAQ</h2></div><div className="pdp-faq">{faqs.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
-    <section className="pdp-final"><p className="pdp-eyebrow">FOR THE PEOPLE YOU LOVE</p><h2>One place to leave the answers.</h2><p>{bundle ? 'Complete planner + First 48 Hours Guide.' : 'Complete digital planner. Every format.'} ${price}. One payment.</p><a href={link} className="pdp-buy">Get Instant Access — ${price}<ArrowRight size={20}/></a><small>Instant download · Printable copy · 30-day money-back guarantee</small></section>
+    <section className="pdp-final"><p className="pdp-eyebrow">FOR THE PEOPLE YOU LOVE</p><h2>One place to leave the answers.</h2><p>{bundle ? 'Complete planner + First 48 Hours Guide.' : 'Complete digital planner. Every format.'} ${price}. One payment.</p><a href="#package-options" className="pdp-buy">Get Instant Access — ${price}<ArrowRight size={20}/></a><small>Instant download · Printable copy · 30-day money-back guarantee</small></section>
     <footer className="pdp-footer"><span className="pdp-brand">FAMILY SAFEKEEP</span><span>© 2026 The Family Safekeep</span><a href="#pdp-faq">Delivery & guarantee</a></footer>
-    <div className="pdp-sticky-buy"><div><strong>The Family Safekeep</strong><span>${price} · Instant digital access</span></div><a href={link}>Get Instant Access<ArrowRight size={17}/></a></div>
+    <div className="pdp-sticky-buy"><div><strong>The Family Safekeep</strong><span>${price} · Instant digital access</span></div><a href="#package-options">Get Instant Access<ArrowRight size={17}/></a></div>
   </main>;
 }
