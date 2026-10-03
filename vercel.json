@@ -3,5 +3,6 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [{"source": "/9-reasons", "destination": "/pdp", "permanent": false}],
   "rewrites": [{"source": "/(.*)", "destination": "/index.html"}]
 }
